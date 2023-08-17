@@ -3,17 +3,15 @@
         <h1 class=" text-7xl relative w-fit mb-12">
             Products
         </h1>
-        <div class="products w-full  rounded-md p-2">
-            <Product/>
-            <Product/>
-            <Product/>
-            <Product/>
-            <Product/>
-            <Product/>
-            <Product/>
-            <Product/>
-            <Product/>
-            <Product/>
+        <div class="products w-full rounded-md p-2" v-if="products">
+            <Product
+            v-for="product of products"
+            :key="product.product_id"
+            :product="product"
+            />
+        </div>
+        <div v-else>
+            Not found
         </div>
     </main>
 </template>
@@ -25,6 +23,14 @@
     export default {
         components: {
             Product
+        }, 
+        computed: {
+            products(){
+                return this.$store.state.products
+            }
+        },
+        mounted(){
+            this.$store.dispatch("fetchProducts")
         }
     }
 

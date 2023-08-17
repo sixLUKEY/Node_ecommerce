@@ -9,10 +9,10 @@
         />
         <div class="flex flex-col gap-5">
             <div>
-                <h2 class="text-3xl">Bitcoin</h2>
-                <p class="text-lg">Lorem, ipsum dolor.</p>
+                <h2 class="text-3xl">{{ product.product_name }}</h2>
+                <p class="text-lg">{{ product.product_disc }}</p>
             </div>
-            <p class="text-4xl">R57899</p>
+            <p class="text-4xl">R {{ product.product_price }}</p>
         </div>
     </div>
   </div>
@@ -20,7 +20,9 @@
 
 <script>
 export default {
-
+  props: [
+    "product"
+  ]
 };
 </script>
 
