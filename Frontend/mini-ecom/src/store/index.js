@@ -1,5 +1,5 @@
 import { createStore } from 'vuex'
-const url = "https://e-com-db.onrender.com/products"
+const url = "https://e-com-db.onrender.com/products/"
 
 export default createStore({
   state: {
@@ -30,7 +30,8 @@ export default createStore({
     },
     async fetchProduct( context, id ){
       try {
-        let product = await ( await fetch( `${url}/${id}` )).json()
+        let product = await ( await fetch( url + id )).json()
+        console.log( id )
         if ( product){
           context.commit( "setProduct", product )
         } else {
@@ -40,6 +41,7 @@ export default createStore({
         alert( err )
       }
     }
+    
   }
 })
 

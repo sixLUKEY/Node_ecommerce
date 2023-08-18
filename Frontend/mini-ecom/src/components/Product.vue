@@ -3,11 +3,10 @@
     <div class="pcontents flex flex-col items-center p-5 gap-2 text-center">
 
         <img
-          src="https://i.postimg.cc/SRHzKQrX/pngwing-com-91-cutout.png"
-          alt=""
-          class=" "
+          :src="product.product_url"
+          :alt="product.product_name"
         />
-        <div class="flex flex-col gap-5">
+        <div class="flex flex-col gap-5 ">
             <div>
                 <h2 class="text-3xl">{{ product.product_name }}</h2>
                 <p class="text-lg">{{ product.product_disc }}</p>

@@ -52,8 +52,9 @@
     .products{
         display: grid;
         grid-template-columns: repeat( 5, 1fr );
-        grid-template-rows: repeat( 2, 1fr );
+        grid-template-rows: repeat( 1 , 1fr );
         gap: 0.5rem;
+        grid-auto-rows: 1fr;
     }
 
 </style>

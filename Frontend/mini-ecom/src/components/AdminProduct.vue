@@ -8,12 +8,13 @@
     <td>R {{ product.product_price }}</td>
     <td class="gap-5 items-center">
       <div class="flex justify-center gap-5">
-        <button class="px-5 py-1 bg-green-500 text-white rounded-sm"
+        
+          <router-link :to="{name: 'admin edit', params:{id: product.product_id }}">
+            <button class="px-5 py-1 bg-green-500 text-white rounded-sm"
         >
-          <router-link :to="{ name: 'admin edit', params: { id: product_id} }">
             Edit
+          </button>
           </router-link>
-        </button>
         <button class="px-5 py-1 bg-red-500 text-white rounded-sm"
         @click="deleteProduct( product.product_id )"
         >

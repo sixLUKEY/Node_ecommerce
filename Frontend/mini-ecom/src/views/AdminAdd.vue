@@ -4,9 +4,9 @@
       class="flex flex-col mb-[2.5rem]"
     >
       <label>Product Name</label>
-      <input type="text" autocomplete="off" required name="product_name" v-model="product_name"/>
+      <input type="text" maxlength="255" autocomplete="off" required name="product_name" v-model="product_name"/>
       <label>Product Description</label>
-      <input type="text" autocomplete="off" required name="product_disc" v-model="product_disc"/>
+      <input type="text" maxlength="255" autocomplete="off" required name="product_disc" v-model="product_disc"/>
       <label>Product Price</label>
       <input type="number" autocomplete="off" required name="product_price" v-model="product_price"/>
       <label>Product URL</label>
